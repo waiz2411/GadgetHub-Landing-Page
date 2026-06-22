@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Outfit", sans-serif;
+  --font-sans: "Inter", sans-serif;
+
+  --color-brand-red: #ED1C27;
+  --color-brand-red-hover: #c4131c;
+  --color-brand-gold: #FACD3E;
+  --color-brand-soft: #FEF2F2;
+  --color-page-bg: #fafaf9;
+  --color-card-bg: #ffffff;
+  --color-border-color: #e7e5e4;
+  --color-text-main: #1c1917;
+  --color-text-muted: #57534e;
+  --color-accent-soft-bg: #f5f5f4;
+
+  --shadow-default-card: 0 2px 10px rgba(0, 0, 0, 0.02);
+  --shadow-card-hover: 0 20px 50px rgba(0, 0, 0, 0.08);
+  --shadow-sidebar: 0 40px 100px rgba(0, 0, 0, 0.06);
+  --shadow-hero-image: 0 30px 100px rgba(0, 0, 0, 0.12);
+  --shadow-toast: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --shadow-primary-btn: 0 10px 15px -3px rgba(237, 28, 39, 0.2), 0 4px 6px -4px rgba(237, 28, 39, 0.2);
+  --shadow-soft-gen: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+
+  --radius-large-card: 32px;
+  --radius-modal: 24px;
+  --radius-button-input: 16px;
+  --radius-badge-tag: 12px;
+  --radius-pill: 9999px;
+  --radius-small-el: 8px;
+  --radius-tiny-el: 6px;
+}
+
+/* Page Level Subtle Gradient Background */
+body {
+  font-family: var(--font-sans);
+  color: #1c1917;
+  background-color: #fafaf9;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(237, 28, 39, 0.03) 0px, transparent 50%),
+    radial-gradient(at 50% 0%, rgba(250, 205, 62, 0.03) 0px, transparent 50%);
+  background-attachment: fixed;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+/* Custom scrollbar matching stone/muted style */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f5f5f4;
+}
+::-webkit-scrollbar-thumb {
+  background: #e7e5e4;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d6d3d1;
+}
+
+/* Root container resetting default Vite centering */
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  text-align: left;
+  min-height: 100vh;
+  display: block;
+}
