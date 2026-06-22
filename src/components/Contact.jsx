@@ -5,21 +5,21 @@ export default function Contact() {
   const contactInfo = [
     {
       title: "Direct Phone Call",
-      value: "+92 300 1234567",
-      link: "tel:+923001234567",
+      value: "+92 336 0186282",
+      link: "tel:+923360186282",
       icon: <Phone className="w-5 h-5 text-[#ED1C27]" />,
       actionText: "Call Now"
     },
     {
       title: "WhatsApp Chat",
-      value: "+92 300 1234567",
-      link: "https://wa.me/923001234567",
+      value: "+923360186282",
+      link: "https://wa.me/923360186282",
       icon: <MessageCircle className="w-5 h-5 text-emerald-600" />,
       actionText: "Chat Live"
     },
     {
       title: "Email Support",
-      value: "support@gadgethub.pk",
+      value: "waiztahseen@gmail.com",
       link: "mailto:support@gadgethub.pk",
       icon: <Mail className="w-5 h-5 text-indigo-600" />,
       actionText: "Write Us"
@@ -51,7 +51,7 @@ export default function Contact() {
         {/* Contact details */}
         <div className="lg:col-span-5 flex flex-col gap-4">
           {contactInfo.map((info, idx) => (
-            <a 
+            <a
               key={idx}
               href={info.link}
               target={info.link.startsWith('http') ? "_blank" : undefined}
@@ -76,12 +76,12 @@ export default function Contact() {
         {/* Map placeholder */}
         <div className="lg:col-span-7 rounded-3xl overflow-hidden border border-stone-200 bg-white shadow-default-card p-2 min-h-[350px] flex">
           <div className="w-full h-full rounded-2xl overflow-hidden relative bg-stone-100 flex flex-col items-center justify-center text-center p-6">
-            {/* Embedded Google Maps Placeholder using standard Iframe */}
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m4!2s0x0!2zMzEuNTA3OCwgNzQuMzQ5Ng!5m2!1sen!2spk"
+            {/* Embedded Google Maps using standard Iframe */}
+            <iframe
+              src="https://maps.google.com/maps?q=Office%2024,%20Block%20D,%20Main%20Boulevard,%20Gulberg%20III,%20Lahore,%20Pakistan&t=&z=15&ie=UTF8&iwloc=&output=embed"
               className="absolute inset-0 w-full h-full border-0 opacity-80 hover:opacity-100 transition-opacity duration-300"
-              allowFullScreen="" 
-              loading="lazy" 
+              allowFullScreen=""
+              loading="lazy"
               title="Google Map Location"
               referrerPolicy="no-referrer-when-downgrade"
             />

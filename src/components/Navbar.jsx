@@ -42,14 +42,14 @@ export default function Navbar() {
         {/* Action Buttons */}
         <div className="hidden md:flex items-center gap-4">
           <a
-            href="tel:+1234567890"
+            href="tel:+923360186282"
             className="flex items-center gap-2 px-4 py-2 bg-white text-stone-900 border border-stone-200 rounded-2xl font-sans font-bold uppercase text-[10px] tracking-wider hover:bg-stone-50 transition-colors duration-200"
           >
             <Phone className="w-3.5 h-3.5 text-stone-500" />
             Call Now
           </a>
           <a
-            href="https://wa.me/1234567890"
+            href="https://wa.me/923360186282"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-5 py-2.5 bg-[#ED1C27] text-white rounded-2xl font-sans font-bold uppercase text-[10px] tracking-widest shadow-primary-btn hover:bg-stone-900 transition-all duration-300"

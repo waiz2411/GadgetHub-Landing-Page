@@ -12,7 +12,7 @@ export default function WhyChooseUs() {
     },
     {
       title: 'Secure Payments',
-      desc: 'Multiple verified checkout pathways including Easypaisa Merchant & Visa/Mastercard.',
+      desc: 'Multiple verified checkout pathways including Easypaisa & Visa/Mastercard.',
       icon: <ShieldCheck className="w-6 h-6 text-indigo-600" />,
       bg: 'bg-indigo-50 border-indigo-100',
     },

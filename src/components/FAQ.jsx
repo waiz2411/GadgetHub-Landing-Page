@@ -10,7 +10,7 @@ export default function FAQ() {
     },
     {
       q: "Which payment channels do you support?",
-      a: "You can securely complete your transactions via Easypaisa Merchant Account, Visa, Mastercard, or direct Bank Wire Transfer. We use secure compliance servers to protect all buyer data."
+      a: "You can securely complete your transactions via Easypaisa Account, Visa, Mastercard, or direct Bank Wire Transfer. We use secure compliance servers to protect all buyer data."
     },
     {
       q: "What is your refund & exchange policy?",
@@ -50,7 +50,7 @@ export default function FAQ() {
         {faqs.map((faq, idx) => {
           const isOpen = openIndex === idx;
           return (
-            <div 
+            <div
               key={idx}
               className="border border-stone-200 rounded-2xl overflow-hidden bg-stone-50/50 hover:bg-white hover:border-stone-300 transition-colors duration-300"
             >

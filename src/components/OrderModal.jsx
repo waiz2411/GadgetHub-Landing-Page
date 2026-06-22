@@ -9,7 +9,7 @@ export default function OrderModal({ isOpen, product, onClose, onSubmit }) {
     whatsapp: '',
     city: '',
     address: '',
-    paymentMethod: 'Easypaisa Merchant',
+    paymentMethod: 'Easypaisa',
     notes: ''
   });
   const [errors, setErrors] = useState({});
@@ -55,7 +55,7 @@ export default function OrderModal({ isOpen, product, onClose, onSubmit }) {
       product: product.name,
       price: product.price
     });
-    
+
     // Reset form
     setFormData({
       customerName: '',
@@ -63,7 +63,7 @@ export default function OrderModal({ isOpen, product, onClose, onSubmit }) {
       whatsapp: '',
       city: '',
       address: '',
-      paymentMethod: 'Easypaisa Merchant',
+      paymentMethod: 'Easypaisa',
       notes: ''
     });
   };
@@ -72,7 +72,7 @@ export default function OrderModal({ isOpen, product, onClose, onSubmit }) {
     <AnimatePresence>
       <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
         {/* Backdrop overlay */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -99,7 +99,7 @@ export default function OrderModal({ isOpen, product, onClose, onSubmit }) {
                 <p className="text-xs text-stone-500 mt-0.5">Quick single-page checkout</p>
               </div>
             </div>
-            <button 
+            <button
               onClick={onClose}
               className="text-stone-400 hover:text-stone-600 transition-colors p-1.5 rounded-lg hover:bg-stone-100"
             >
@@ -125,8 +125,8 @@ export default function OrderModal({ isOpen, product, onClose, onSubmit }) {
             <div className="space-y-4">
               <div>
                 <label className="block font-display font-semibold text-xs text-stone-700 uppercase tracking-wider mb-1.5">Full Name *</label>
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   name="customerName"
                   value={formData.customerName}
                   onChange={handleChange}
@@ -139,8 +139,8 @@ export default function OrderModal({ isOpen, product, onClose, onSubmit }) {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block font-display font-semibold text-xs text-stone-700 uppercase tracking-wider mb-1.5">Phone Number *</label>
-                  <input 
-                    type="tel" 
+                  <input
+                    type="tel"
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
@@ -152,8 +152,8 @@ export default function OrderModal({ isOpen, product, onClose, onSubmit }) {
 
                 <div>
                   <label className="block font-display font-semibold text-xs text-stone-700 uppercase tracking-wider mb-1.5">WhatsApp Number (Optional)</label>
-                  <input 
-                    type="tel" 
+                  <input
+                    type="tel"
                     name="whatsapp"
                     value={formData.whatsapp}
                     onChange={handleChange}
@@ -166,8 +166,8 @@ export default function OrderModal({ isOpen, product, onClose, onSubmit }) {
 
               <div>
                 <label className="block font-display font-semibold text-xs text-stone-700 uppercase tracking-wider mb-1.5">City *</label>
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   name="city"
                   value={formData.city}
                   onChange={handleChange}
@@ -179,7 +179,7 @@ export default function OrderModal({ isOpen, product, onClose, onSubmit }) {
 
               <div>
                 <label className="block font-display font-semibold text-xs text-stone-700 uppercase tracking-wider mb-1.5">Complete Address *</label>
-                <textarea 
+                <textarea
                   name="address"
                   value={formData.address}
                   onChange={handleChange}
@@ -194,25 +194,25 @@ export default function OrderModal({ isOpen, product, onClose, onSubmit }) {
               <div>
                 <label className="block font-display font-semibold text-xs text-stone-700 uppercase tracking-wider mb-2.5">Payment Method *</label>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  <label className={`flex items-center gap-3 p-4 rounded-2xl border cursor-pointer transition-all duration-300 ${formData.paymentMethod === 'Easypaisa Merchant' ? 'border-brand-red bg-brand-soft/30' : 'border-stone-200 hover:border-stone-300 bg-white'}`}>
-                    <input 
-                      type="radio" 
-                      name="paymentMethod" 
-                      value="Easypaisa Merchant"
-                      checked={formData.paymentMethod === 'Easypaisa Merchant'}
+                  <label className={`flex items-center gap-3 p-4 rounded-2xl border cursor-pointer transition-all duration-300 ${formData.paymentMethod === 'Easypaisa' ? 'border-brand-red bg-brand-soft/30' : 'border-stone-200 hover:border-stone-300 bg-white'}`}>
+                    <input
+                      type="radio"
+                      name="paymentMethod"
+                      value="Easypaisa"
+                      checked={formData.paymentMethod === 'Easypaisa'}
                       onChange={handleChange}
                       className="w-4 h-4 text-brand-red focus:ring-brand-red accent-[#ED1C27]"
                     />
                     <div className="text-left">
-                      <p className="font-display font-bold text-sm text-stone-900">Easypaisa Merchant</p>
+                      <p className="font-display font-bold text-sm text-stone-900">Easypaisa</p>
                       <p className="text-[10px] text-stone-500 mt-0.5">Pay via App or Mobile Account</p>
                     </div>
                   </label>
 
                   <label className={`flex items-center gap-3 p-4 rounded-2xl border cursor-pointer transition-all duration-300 ${formData.paymentMethod === 'Mastercard' ? 'border-brand-red bg-brand-soft/30' : 'border-stone-200 hover:border-stone-300 bg-white'}`}>
-                    <input 
-                      type="radio" 
-                      name="paymentMethod" 
+                    <input
+                      type="radio"
+                      name="paymentMethod"
                       value="Mastercard"
                       checked={formData.paymentMethod === 'Mastercard'}
                       onChange={handleChange}
@@ -228,7 +228,7 @@ export default function OrderModal({ isOpen, product, onClose, onSubmit }) {
 
               <div>
                 <label className="block font-display font-semibold text-xs text-stone-700 uppercase tracking-wider mb-1.5">Order Notes (Optional)</label>
-                <textarea 
+                <textarea
                   name="notes"
                   value={formData.notes}
                   onChange={handleChange}

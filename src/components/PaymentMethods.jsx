@@ -4,7 +4,7 @@ import { ShieldCheck, CreditCard, Landmark, Wallet, Check } from 'lucide-react';
 export default function PaymentMethods() {
   const paymentMethods = [
     {
-      name: "Easypaisa Merchant",
+      name: "Easypaisa",
       enabled: true,
       icon: <Wallet className="w-6 h-6 text-emerald-600" />,
       description: "Direct merchant account billing"
@@ -41,7 +41,7 @@ export default function PaymentMethods() {
             100% Secure Checkout Channels
           </h2>
           <p className="font-sans font-medium text-sm text-stone-600 leading-relaxed">
-            Pay securely using Easypaisa Merchant Account, Mastercard, Visa Cards, or Bank Transfer.
+            Pay securely using Easypaisa Account, Mastercard, Visa Cards, or Bank Transfer.
           </p>
           <div className="flex items-center gap-2 p-3 bg-stone-50 border border-stone-100 rounded-2xl max-w-sm">
             <ShieldCheck className="w-5 h-5 text-emerald-500 flex-shrink-0" />
@@ -52,13 +52,12 @@ export default function PaymentMethods() {
         {/* Right side list */}
         <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
           {paymentMethods.map((method, index) => (
-            <div 
+            <div
               key={index}
-              className={`p-5 rounded-2xl border transition-all duration-300 flex items-start gap-4 ${
-                method.enabled 
-                  ? 'bg-stone-50/50 border-stone-200 hover:border-stone-300 hover:bg-white hover:shadow-default-card' 
+              className={`p-5 rounded-2xl border transition-all duration-300 flex items-start gap-4 ${method.enabled
+                  ? 'bg-stone-50/50 border-stone-200 hover:border-stone-300 hover:bg-white hover:shadow-default-card'
                   : 'opacity-55 bg-stone-100 border-transparent cursor-not-allowed'
-              }`}
+                }`}
             >
               <div className="w-12 h-12 rounded-xl bg-white border border-stone-200 flex items-center justify-center flex-shrink-0 shadow-sm">
                 {method.icon}
